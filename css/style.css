@@ -26,7 +26,7 @@ body {
   padding-right: 15px;
 }
 
-section {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
   width: 100%;
@@ -242,7 +242,7 @@ img {
 
 /* ------------------------- WORK -------------------------  */
 
-section.work {
+.work.section {
   padding-top: 0;
 }
 
@@ -286,8 +286,7 @@ section.work {
   flex-basis: calc((100% - var(--main-margin) * 3) / 4);
 
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -358,6 +357,7 @@ section.work {
 .section-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .section-btn {
@@ -383,17 +383,35 @@ section.work {
 }
 
 .portfolio-list {
-  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--main-margin));
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.portfolio-item {
+  margin-top: var(--main-margin);
+  margin-left: var(--main-margin);
+  flex-basis: calc((100% - var(--main-margin) * 3) / 3);
+
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.portfolio-list .card-description {
+  padding: 20px 24px;
 }
 
 .portfolio-title {
   font-size: 18px;
   line-height: 2;
-
+  text-align: left;
   letter-spacing: 0.06em;
 }
 
 .portfolio-description {
+  margin-top: 5px;
+
   font-size: 16px;
   line-height: 1.87;
 }
