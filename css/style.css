@@ -213,14 +213,20 @@ img {
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--main-margin));
+  margin-top: calc(-1 * var(--main-margin));
 }
 
 .features-item {
-  flex-basis: calc((100% - var(--main-margin) * 3) / 4);
+  margin-left: var(--main-margin);
+  margin-top: var(--main-margin);
+  flex-basis: calc((100% - var(--main-margin) * 4) / 4);
 }
 
-.features-item:not(:last-child) {
-  margin-right: var(--main-margin);
+.features-item:not(:first-child) {
+  margin-left: var(--main-margin);
+  margin-top: var(--main-margin);
 }
 
 .features-title {
@@ -242,18 +248,25 @@ section.work {
 
 .work-list {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--main-margin));
+  margin-top: calc(-1 * var(--main-margin));
 }
 
 .work-item {
-  flex-basis: calc((100% - var(--main-margin) * 2) / 3);
+  margin-left: var(--main-margin);
+  margin-top: var(--main-margin);
+  flex-basis: calc((100% - var(--main-margin) * 3) / 3);
 }
 
-.work-item:not(:last-child) {
-  margin-right: var(--main-margin);
+.work-item:not(:first-child) {
+  margin-left: var(--main-margin);
+  margin-top: var(--main-margin);
 }
 
 .work-title {
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
 }
@@ -342,22 +355,35 @@ section.work {
 /* ------------------------- PORTFOLIO -------------------------  */
 /* ------------------------- --------- -------------------------  */
 
+.section-list {
+  display: flex;
+  justify-content: center;
+}
+
 .section-btn {
+  padding: 6px 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: #212121;
-
   background-color: #f5f4fa;
-
   border-style: none;
+}
+
+.section-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .active-btn {
   color: #ffffff;
 
   background-color: var(--accent-color);
+}
+
+.portfolio-list {
+  margin-top: 50px;
 }
 
 .portfolio-title {
